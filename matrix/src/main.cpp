@@ -169,43 +169,57 @@ void writeArduinoOnMatrix() {
 //     }
 //   }
 // }
+void letter(byte letter[]) {
+  renderLetter(matrix, letter);
+  delay(letter_duration);
+  matrix.clearDisplay(0);
+  delay(50);
+}
 
 void loop() {
-	renderLetter(matrix, T);
-  delay(letter_duration);
-	renderLetter(matrix, O);
-  delay(letter_duration);
-	renderLetter(matrix, P);
-  delay(letter_duration);
+  // renderLetter(matrix, T);
+  // delay(letter_duration);
+  // renderLetter(matrix, O);
+  // delay(letter_duration);
+  // renderLetter(matrix, P);
+  // delay(letter_duration);
+  //
+  // matrix.clearDisplay(0);
+  // delay(letter_duration);
+  //
+  // renderLetter(matrix, K);
+  // delay(letter_duration);
+  // renderLetter(matrix, E);
+  // delay(letter_duration);
+  // renderLetter(matrix, K);
+  // delay(letter_duration);
+  //
+  // matrix.clearDisplay(0);
+  // delay(letter_duration);
+  letter(S);
+  letter(T);
+  letter(O);
+  delay(500);
+  letter(L);
+  letter(A);
+  letter(T);
+  delay(500);
 
+  renderLetter(matrix, heart);
+  delay(letter_duration);
+  matrix.clearDisplay(0);
+  delay(letter_duration);
+  renderLetter(matrix, heart);
+  delay(letter_duration);
+  matrix.clearDisplay(0);
+  delay(letter_duration);
+  renderLetter(matrix, heart);
+  delay(letter_duration);
   matrix.clearDisplay(0);
   delay(letter_duration);
 
-	renderLetter(matrix, K);
-  delay(letter_duration);
-	renderLetter(matrix, E);
-  delay(letter_duration);
-	renderLetter(matrix, K);
-  delay(letter_duration);
-
-  matrix.clearDisplay(0);
-  delay(letter_duration);
-
-	renderLetter(matrix, heart);
-  delay(letter_duration);
-  matrix.clearDisplay(0);
-  delay(letter_duration);
-	renderLetter(matrix, heart);
-  delay(letter_duration);
-  matrix.clearDisplay(0);
-  delay(letter_duration);
-	renderLetter(matrix, heart);
-  delay(letter_duration);
-  matrix.clearDisplay(0);
-  delay(letter_duration);
-
-	renderLetter(matrix, smirk);
+  renderLetter(matrix, smirk);
   delay(letter_duration * 8);
 
-	delay(3000);
+  delay(3000);
 }

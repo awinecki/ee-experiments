@@ -28,6 +28,6 @@ void blink(uint8_t times, uint8_t high_duration, uint8_t low_duration)
 
 void loop()
 {
-  blink(10, 200, 100);
-  delay(1500);
+  blink(5, 200, 100);
+  delay(1000);
 }
